@@ -14,7 +14,25 @@ var app     = express();
 
 app.get('/scrape', function(req, res){
 
-  //All the web scraping magic will happen here
+  	//All the web scraping magic will happen here
+  	
+  	url = 'http://ncc-ccn.gc.ca/places-to-visit/rideau-canal-skateway';
+
+	request(url, function(error, response, html){
+		
+		if(!error){
+			var $ = cheerio.load(html);
+			
+			$('.table tbody').filter(function(){
+                var data = $(this);
+
+                console.log(data.children().first().text());
+                // title = data.children().first().text();
+                // json.title = title;
+            })
+
+		}
+	});
 
 });
 
