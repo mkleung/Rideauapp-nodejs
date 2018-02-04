@@ -38,20 +38,17 @@ app.get('/scrape', function(req, res){
 
 			console.log(results);
 
-			// $('.table tbody').filter(function(){
-   //  //             var data = $(this);
 
-   //  //             data.children().each(function(i, elem) {
-			// 	//   	results.push();
-			// 	// });
+			fs.writeFile('output.json', JSON.stringify(results, null, 4), function(err){
 
-   //  //             console.log(data.children().second().text());
-   //              // title = data.children().first().text();
-   //              // json.title = title;
-   //          })
+			    console.log('File successfully written! - Check your project directory for the output.json file');
+
+			});
 
 		}
 	});
+
+
 
 });
 

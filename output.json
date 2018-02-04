@@ -1,0 +1,68 @@
+[
+    {},
+    {
+        "title": "Rideau Locks (NAC) - Mackenzie-King Bridge",
+        "condition": "Fair",
+        "length": "0.2 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "MacKenzie-King Bridge - Laurier Bridge",
+        "condition": "Fair",
+        "length": "0.19 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Laurier Bridge - Corktown Footbridge / Somerset",
+        "condition": "Fair",
+        "length": "0.4 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Corktown Footbridge / Somerset - Concord Street",
+        "condition": "Fair",
+        "length": "0.57 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Concord Street - Pretoria Bridge",
+        "condition": "Good",
+        "length": "0.65 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Pretoria Bridge - Fifth Ave",
+        "condition": "Good",
+        "length": "0.48 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Patterson Creek - Patterson Creek",
+        "condition": "Fair",
+        "length": "0.3 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Fifth Ave - Pig Island",
+        "condition": "Good",
+        "length": "0.83 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Pig Island - Bank Street Bridge",
+        "condition": "Good",
+        "length": "0.7 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Bank Street Bridge - Bronson Bridge",
+        "condition": "Good",
+        "length": "0.46 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Bronson Bridge - Dows Lake",
+        "condition": "Good",
+        "length": "0.98 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Dows Lake - Dows Lake",
+        "condition": "Good",
+        "length": "1.4 km\n\t\t\t\t\t\t"
+    },
+    {
+        "title": "Dows Lake - Hartwells Locks",
+        "condition": "Good",
+        "length": "0.68 km\n\t\t\t\t\t\t"
+    }
+]
