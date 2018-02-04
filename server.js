@@ -2,7 +2,8 @@ var express = require('express');
 var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
-var app     = express();
+
+var app = express();
 
 
 
@@ -24,7 +25,7 @@ var app     = express();
 */
 
 app.get('/list', function(req, res){
-	var obj = JSON.parse(fs.readFileSync('output.json', 'utf8'));
+	var obj = JSON.parse(fs.readFileSync('rideau.json', 'utf8'));
 	res.send(obj);
 });
 
@@ -48,13 +49,21 @@ app.get('/scrape', function(req, res){
 			$('.table tbody tr').each(function(i, elem) {
 				var stretch = $(this).text();
 				var rideauArray = stretch.split('\n\t\t\t\t\t\t\t');
-			  	results[i] = { title : rideauArray[2], condition : rideauArray[1], length : rideauArray[3]};
+				var title =  rideauArray[2];
+				var condition = rideauArray[1];
+				var tracklength = rideauArray[3];
+			  	results[i] = { title : title, condition : condition, length : tracklength };
 			});
 
 			// this saves to an output file
-			fs.writeFile('output.json', JSON.stringify(results, null, 4), function(err){
+			fs.writeFile('rideau.json', JSON.stringify(results, null, 4), function(err){
 			    console.log('File successfully written! - Check your project directory for the output.json file');
 			});
+
+			res.send("Success");
+		}
+		else {
+			res.send("Error");
 		}
 
 	});
@@ -70,6 +79,6 @@ app.get('/scrape', function(req, res){
 
 app.listen('8081')
 
-console.log('Magic happens on port 8081');
+console.log('Listening... Go to http://localhost:8081');
 
 exports = module.exports = app;
