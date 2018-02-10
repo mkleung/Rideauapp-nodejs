@@ -29,7 +29,7 @@ app.use(express.static('public'));
 */
 
 app.get('/list', function(req, res){
-	var obj = JSON.parse(fs.readFileSync('rideau.json', 'utf8'));
+	var obj = JSON.parse(fs.readFileSync('public/rideau.json', 'utf8'));
 	res.send(obj);
 });
 
@@ -60,7 +60,7 @@ app.get('/scrape', function(req, res){
 			});
 
 			// this saves to an output file
-			fs.writeFile('rideau.json', JSON.stringify(results, null, 4), function(err){
+			fs.writeFile('public/rideau.json', JSON.stringify(results, null, 4), function(err){
 			    console.log('File successfully written! - Check your project directory for the rideau   .json file');
 			});
 
