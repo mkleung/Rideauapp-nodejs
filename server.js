@@ -12,10 +12,14 @@ var app = express();
 | TEST
 |==========================================================================
 */
- app.get('/', function(req, res){
-	console.log("get");
-	res.send({hello: "World"});
-});
+
+
+app.use(express.static('public'));
+
+//  app.get('/', function(req, res){
+// 	console.log("get");
+// 	res.send({hello: "World"});
+// });
 
 
 /*
@@ -57,7 +61,7 @@ app.get('/scrape', function(req, res){
 
 			// this saves to an output file
 			fs.writeFile('rideau.json', JSON.stringify(results, null, 4), function(err){
-			    console.log('File successfully written! - Check your project directory for the output.json file');
+			    console.log('File successfully written! - Check your project directory for the rideau   .json file');
 			});
 
 			res.send("Success");
