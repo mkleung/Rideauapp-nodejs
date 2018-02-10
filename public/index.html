@@ -40,46 +40,16 @@
     </div>
   </section>
 
+  <script type="text/javascript" src="js/main.js"></script>
   <script>
-       function initMap() {
-         var rideau = {lat: 45.4045, lng: -75.6810};
-         var map = new google.maps.Map(document.getElementById('map'), {
-           zoom: 13,
-           center: rideau
-         });
-         var marker = new google.maps.Marker({
-           position: rideau,
-           map: map,
-           label: {
-            text: "Fair",
-            color: "#4682B4",
-            fontSize: "10px",
-            fontWeight: "bold"
-          },
-          title: "Hello World!",
-          visible: true
-         });
-       }
+
   </script> 
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDcA1nJFfEyn4ihIHs8kbjmLMUXwdEbIHk&callback=initMap">
   </script>
 
 
   <script type="text/javascript">
-     $.getJSON( "rideau.json", function( data ) {
-  var items = [];
-  $.each( data, function( key, val ) {
-      var title = val.title;
-      var condition = val.condition;
-      var length = val.length;
-      items.push( "<li>" + title + " - <strong>" + condition + "</strong></li>" );
-  });
- 
-  $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "#results" );
-});
+
   </script>
 </body>
 </html>
