@@ -46,7 +46,15 @@
          });
          var marker = new google.maps.Marker({
            position: rideau,
-           map: map
+           map: map,
+           label: {
+            text: "Fair",
+            color: "#4682B4",
+            fontSize: "10px",
+            fontWeight: "bold"
+          },
+          title: "Hello World!",
+          visible: true
          });
        }
   </script> 

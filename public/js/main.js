@@ -8,3 +8,17 @@
         menu.classList.toggle('is-active');
     });
 })();
+
+
+
+function initMap() {
+var rideau = {lat: 45.4045, lng: -75.6810};
+var map = new google.maps.Map(document.getElementById('map'), {
+zoom: 13,
+center: rideau
+});
+var marker = new google.maps.Marker({
+position: rideau,
+map: map
+});
+}
