@@ -1,5 +1,4 @@
 [
-    {},
     {
         "title": "Rideau Locks (NAC) - Mackenzie-King Bridge",
         "condition": "Fair",
@@ -37,32 +36,32 @@
     },
     {
         "title": "Fifth Ave - Pig Island",
-        "condition": "Fair",
+        "condition": "Good",
         "length": "0.7 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Pig Island - Bank Street Bridge",
-        "condition": "Fair",
+        "condition": "Good",
         "length": "0.45 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Bank Street Bridge - Bronson Bridge",
-        "condition": "Fair",
+        "condition": "Good",
         "length": "1.0 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Bronson Bridge - Dows Lake",
-        "condition": "Fair",
+        "condition": "Good",
         "length": "0.2 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Dows Lake - Dows Lake",
-        "condition": "Fair",
+        "condition": "Good",
         "length": "1.7 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Dows Lake - Hartwells Locks",
-        "condition": "Fair",
+        "condition": "Good",
         "length": "0.6 km\n\t\t\t\t\t\t"
     }
 ]

@@ -59,9 +59,11 @@ app.get('/scrape', function(req, res){
 			  	results[i] = { title : title, condition : condition, length : tracklength };
 			});
 
-			// this saves to an output file
+			results.shift();
+
+			// thi); saves to an output file
 			fs.writeFile('public/rideau.json', JSON.stringify(results, null, 4), function(err){
-			    console.log('File successfully written! - Check your project directory for the rideau   .json file');
+			    console.log('File successfully written! - Check your project directory for the public/rideau.json file');
 			});
 
 			res.send("Success");
