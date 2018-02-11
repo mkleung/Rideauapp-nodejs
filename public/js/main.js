@@ -32,25 +32,31 @@ $.getJSON( "../rideau.json", function( data ) {
 
 		switch(condition) {
 		    case "Excellent":
-		    	var color = "has-text-info";
+		    	var colorClass = "has-text-info";
+		    	var color = "hsl(217, 71%, 53%)";
 		    	break;
 		    case "Good":
-		        var color = "has-text-success";
+		        var colorClass = "has-text-success";
+		        var color = "hsl(141, 71%, 48%)";
 		        break;
 		    case "Fair":
-		        var color = "has-text-primary";
+		        var colorClass = "has-text-primary";
+		        var color = "hsl(171, 100%, 41%)";
 		        break;
 		    case "Poor":
-		    	var color = "has-text-warning";
+		    	var colorClass = "has-text-warning";
+		    	var color = "hsl(48, 100%, 67%)";
 		    	break;
 		    case "Closed":
-		    	var color = "has-text-danger";
+		    	var colorClass = "has-text-danger";
+		    	var color = "hsl(348, 100%, 61%)";
 		    	break;
 		    default:
-		        var color = "has-text-danger";
+		        var colorClass = "has-text-danger";
+		        var color = "hsl(348, 100%, 61%)";
 		}
 
-		items.push( "<li>" + title + " - <span class='" + color + "'><strong>" + condition + "</strong></span></li>" );
+		items.push( "<li>" + title + " - <span class='" + colorClass + "'><strong>" + condition + "</strong></span></li>" );
 
 		
 		switch(title) {
@@ -119,7 +125,9 @@ $.getJSON( "../rideau.json", function( data ) {
 		    	var longitude = -75.700564;
 		}
 
-		locations.push([title, latitude , longitude ,  condition]);
+
+
+		locations.push([title, latitude , longitude ,  condition, color, length]);
 
 	});
 
@@ -178,15 +186,27 @@ setTimeout(
         map: map,
         label: {
 			text: String(locations[i][3]),
-			color: "#4682B4",
-			fontSize: "10px",
+			color: "#000",
+			fontSize: "12px",
 			fontWeight: "bold"
-		}
+		},
+		// icon: {
+  //     		url: '../img/ice-skating.svg',
+
+  //   		scaledSize: new google.maps.Size(20, 20),
+  //   		anchor: new google.maps.Point(30, 30),
+      		
+  // 		}
+		icon: {
+	        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+	        strokeColor: locations[i][4],
+	        scale: 3
+	    },
       });
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(locations[i][0] + "(" + locations[i][3] + ")");
+          infowindow.setContent(locations[i][0] + "(" + locations[i][3] + ")" +  "<p>" + locations[i][5] + "</p>");
           infowindow.open(map, marker);
         }
       })(marker, i));
