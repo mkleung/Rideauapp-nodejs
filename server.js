@@ -83,10 +83,12 @@ app.get('/scrape', function(req, res){
 |==========================================================================
 */
 
-app.listen('8081')
+//app.listen('8081')
 
-console.log('Listening... Go to http://localhost:8081');
-
+var port = process.env.PORT || 8000
+server.listen(port, function() {
+    console.log("App is running on port " + port);
+});
 
 /*
 |==========================================================================
@@ -97,7 +99,7 @@ console.log('Listening... Go to http://localhost:8081');
 var requestLoop = setInterval(function(){
 		
 	  request({
-	      url: "http://localhost:8081/scrape",
+	      url: "https://young-ridge-69555.herokuapp.com/scrape",
 	      method: "GET",
 	      timeout: 10000,
 	      followRedirect: true,
