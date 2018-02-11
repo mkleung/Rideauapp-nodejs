@@ -55,22 +55,69 @@ $.getJSON( "../rideau.json", function( data ) {
 		
 		switch(title) {
 		    case "Rideau Locks (NAC) - Mackenzie-King Bridge":
-		    	var latitude = 45.422989;
-		    	var longitude = -75.690186;
+		    	var latitude = 45.424009;
+		    	var longitude = -75.693084;
 		    	break;
+
 		    case "MacKenzie-King Bridge - Laurier Bridge":
-		      	var latitude = 45.421755;
-		    	var longitude = -75.686799;
+		    	var latitude = 45.422992;
+		    	var longitude = -75.690230;
 		        break;
+
 		    case "Laurier Bridge - Corktown Footbridge / Somerset":
-		        var latitude = 45.420609;
-		    	var longitude = -75.684555;
+		    	var latitude = 45.421426;
+		    	var longitude = -75.686647;
 		        break;
+  			
+  			case "Corktown Footbridge / Somerset - Concord Street":
+		    	var latitude = 45.418670;
+		    	var longitude = -75.680587;
+		        break;
+
+		    case "Concord Street - Pretoria Bridge":
+		    	var latitude = 45.415537;
+		    	var longitude = -75.682013;
+		        break;
+
+		    case "Pretoria Bridge - Fifth Ave":
+		    	var latitude = 45.418670;
+		    	var longitude = -75.680587;
+		        break;
+
+		    case "Patterson Creek - Patterson Creek":
+		    	var latitude = 45.408212;
+		    	var longitude = -75.681574;
+		        break;
+
+		    case "Fifth Ave - Pig Island":
+		    	var latitude = 45.401405;
+		    	var longitude = -75.67911;
+		        break;
+
+	    	case "Pig Island - Bank Street Bridge":
+		    	var latitude = 45.398008;
+		    	var longitude = -75.680587;
+		        break;
+
+		    case "Bank Street Bridge - Bronson Bridge":
+		    	var latitude = 45.394919;
+		    	var longitude = -75.689840;
+		        break;
+
+		    case "Bronson Bridge - Dows Lake":
+		    	var latitude = 45.393804;
+		    	var longitude = -75.697049;
+		        break;
+
+		   	case "Dows Lake - Dows Lake":
+		    	var latitude = 45.395190;
+		    	var longitude = -75.702349;
+		        break;
+
 		    default:
-		        var latitude = 45.405250;
-		    	var longitude = -75.680992;
+		        var latitude = 45.38824;
+		    	var longitude = -75.700564;
 		}
-		
 
 		locations.push([title, latitude , longitude ,  condition]);
 
