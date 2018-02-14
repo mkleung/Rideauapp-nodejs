@@ -6,6 +6,15 @@ var cheerio = require('cheerio');
 var app = express();
 
 
+if (app.get('env')) {
+	var url = "https://young-ridge-69555.herokuapp.com";
+	console.log("url: " + url);
+}
+else {
+	var url = "http://localhost:8000/";
+	console.log("url: " + url);
+}
+
 
 /*
 |==========================================================================
@@ -99,7 +108,7 @@ app.listen(port, function() {
 var requestLoop = setInterval(function(){
 		
 	  request({
-	      url: "https://young-ridge-69555.herokuapp.com/scrape",
+	      url: url + "/scrape",
 	      method: "GET",
 	      timeout: 10000,
 	      followRedirect: true,
@@ -112,6 +121,9 @@ var requestLoop = setInterval(function(){
 	      }
 	  });
 }, 3600000);
+
+
+
 
 
 exports = module.exports = app;
