@@ -215,14 +215,15 @@ setTimeout(
 
   	}, 500
 );
-
-
-
-	
-
-
 }
 
 
+var xhr = $.ajax({
+    url: "../rideau.json",
+    success: function(response) {
 
+    	var modifiedDate = new Date(xhr.getResponseHeader("Last-Modified"));
+        $('#lastUpdated').html("<hr><p>Last Updated: <strong>" + modifiedDate + "</strong></p>");
+    }
+});
 
