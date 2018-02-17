@@ -1,13 +1,21 @@
+== THE REGULAR WAY ==
+
 
 npm install express
 npm install cheerio
 npm install request
+npm install moment --save
 
-node server
+== STARTING THE SERVER ==
+
+### Enter node server to start the server and add this into the browser
 
 http://localhost:8081
 
-== OR ==
+
+== OR USE NODEMON ==
+
+With nodemon, everytime you make changes to the site, it automatically reloads
 
 npm install nodemon --save-dev
 
@@ -28,7 +36,5 @@ git push heroku master
 
 
 heroku ps:scale web=1
-
-https://young-ridge-69555.herokuapp.com/
 
 https://young-ridge-69555.herokuapp.com/

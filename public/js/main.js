@@ -223,7 +223,8 @@ var xhr = $.ajax({
     success: function(response) {
 
     	var modifiedDate = new Date(xhr.getResponseHeader("Last-Modified"));
-        $('#lastUpdated').html("<hr><p>Last Updated: <strong>" + modifiedDate + "</strong></p>");
+
+        $('#lastUpdated').html("<hr><p>Last Updated: <strong>" + moment(modifiedDate).format('MMMM Do YYYY, h:mm a') + "</strong></p>");
     }
 });
 
