@@ -38,3 +38,8 @@ git push heroku master
 heroku ps:scale web=1
 
 https://young-ridge-69555.herokuapp.com/
+
+
+### Google MAPS API Key
+
+https://developers.google.com/maps/documentation/embed/get-api-key
