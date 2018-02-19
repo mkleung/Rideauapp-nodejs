@@ -190,13 +190,6 @@ setTimeout(
 			fontSize: "12px",
 			fontWeight: "bold"
 		},
-		// icon: {
-  //     		url: '../img/ice-skating.svg',
-
-  //   		scaledSize: new google.maps.Size(20, 20),
-  //   		anchor: new google.maps.Point(30, 30),
-      		
-  // 		}
 		icon: {
 	        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
 	        strokeColor: locations[i][4],

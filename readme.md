@@ -5,6 +5,7 @@ npm install express
 npm install cheerio
 npm install request
 npm install moment --save
+npm install --save google-map-react
 
 == STARTING THE SERVER ==
 
