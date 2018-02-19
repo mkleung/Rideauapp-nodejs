@@ -37,7 +37,7 @@ app.use(express.static('public'));
 |==========================================================================
 */
 
-app.get('/list', function(req, res){
+app.get('/api/list', function(req, res){
 	var obj = JSON.parse(fs.readFileSync('public/rideau.json', 'utf8'));
 	res.send(obj);
 });
@@ -49,7 +49,7 @@ app.get('/list', function(req, res){
 | SCRAPE
 |==========================================================================
 */
-app.get('/scrape', function(req, res){
+app.get('/api/scrape', function(req, res){
 
   	var results = new Array();
 
@@ -108,7 +108,7 @@ app.listen(port, function() {
 var requestLoop = setInterval(function(){
 		
 	  request({
-	      url: url + "/scrape",
+	      url: url + "api/scrape",
 	      method: "GET",
 	      timeout: 10000,
 	      followRedirect: true,

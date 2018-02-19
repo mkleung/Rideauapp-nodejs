@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>Rideau App</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet"><!-- Bulma Version 0.6.0 -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css" rel="stylesheet">
+  <link href="css/landing.css" rel="stylesheet" type="text/css">
+  <link rel="icon" href="img/ice-skating.svg" sizes="any" type="image/svg+xml">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src="js/moment.js"></script>
+</head>
+
+<body>
+
+<section class="hero is-info is-fullheight">
+		
+		<!--
+		|==========================================================================
+		| TEST
+		|==========================================================================
+		-->
+	    <div class="hero-head">
+			<nav class="navbar">
+				<div class="container">
+				  <div class="navbar-brand">
+				    <a class="navbar-item" href="../">Rideau Canada App</a>
+				      <span class="navbar-burger burger" data-target="navbarMenu">
+				      	<span></span>
+				      	<span></span>
+				      	<span></span>
+				      </span>
+				  </div>
+				  <div class="navbar-menu" id="navbarMenu">
+				    <div class="navbar-end">
+				      <a class="navbar-item is-active">Home</a>
+				      <span class="navbar-item"><a class="button is-white is-outlined is-small" href="">
+				        <span class="icon"><i class="fa fa-location-arrow"></i></span>
+				        <span>Login</span></a>
+				      </span>
+				    </div>
+				  </div>
+				</div>
+			</nav>
+	    </div>
+
+		<!--
+		|==========================================================================
+		| MAIN CONTENT
+		|==========================================================================
+		-->
+	    <div class="hero-body">
+	      <div class="container has-text-centered">
+	        <div class="column is-6 is-offset-3">
+	          <h1 class="title">Rideau Canal Skating Conditions</h1>
+	          <div class="box">
+	            <div id="map"></div>
+	            <ul id="rideauparts"></ul>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	</section>
+
+	<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+	<script src="https://unpkg.com/react@15/dist/react.js"></script>
+	<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+
+	<script type="text/babel">
+
+				var RideauParts = React.createClass({
+
+					getInitialState: function(){
+						return({
+							rideauparts: []
+						});
+					},
+
+					/* Page is loaded */
+					componentDidMount: function() {
+						fetch('http://localhost:8000/api/list').then(function(data){
+							return data.json();
+						}).then( json => {
+		                    this.setState({
+		                        rideauparts: json
+		                    });
+		                    console.log("state:" , this.state.rideauparts );
+		                });
+
+
+					  },
+
+					render: function(){
+		     
+						return(
+							<li>Title - <span><strong>Poot</strong></span></li>
+						);
+					},
+
+				});
+
+				
+				ReactDOM.render(<RideauParts />, document.getElementById('rideauparts'));
+
+			</script>
+
+	</body>
+</html>
