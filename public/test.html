@@ -75,7 +75,7 @@
 
 					getInitialState: function(){
 						return({
-							rideauparts: []
+						
 						});
 					},
 
@@ -87,17 +87,30 @@
 		                    this.setState({
 		                        rideauparts: json
 		                    });
-		                    console.log("state:" , this.state.rideauparts );
 		                });
-
-
 					  },
 
 					render: function(){
 		     
-						return(
-							<li>Title - <span><strong>Poot</strong></span></li>
+		     			var rideauparts = this.state.rideauparts;
+
+		     			if (rideauparts != null) {
+		  
+			     			rideauparts = rideauparts.map(function(rideaupart, index){
+			                    console.log(rideaupart);
+			                    var rideauLength = (rideaupart.length).trim();
+			                    return (
+			                    	<li key={index}>{rideaupart.title} ({rideauLength}) - {rideaupart.condition}</li>
+			                    );
+			                    
+			                });
+		     			}
+		     			
+		               return(
+								<ul>{rideauparts}</ul>
 						);
+
+						
 					},
 
 				});
