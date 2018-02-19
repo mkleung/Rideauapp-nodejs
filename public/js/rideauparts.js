@@ -8,7 +8,17 @@ getInitialState: function(){
 
 /* Page is loaded */
 componentDidMount: function() {
-	fetch('http://localhost:8000/api/list').then(function(data){
+
+	var currentUrl = window.location.href;
+
+	if (currentUrl.includes("localhost")) {
+		var url = "http://localhost:8000";
+	} 
+	else {
+		var url = "https://young-ridge-69555.herokuapp.com";
+	}
+	fetch('/api/list').then(function(data){
+		console.log(window.location.href);
 		return data.json();
 	}).then( json => {
         this.setState({
