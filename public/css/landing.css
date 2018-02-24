@@ -25,3 +25,7 @@ html, body {
 .results {
   padding-top: 40px;
 }
+
+hr  {
+  margin: 0;
+}

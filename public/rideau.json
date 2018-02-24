@@ -1,67 +1,67 @@
 [
     {
         "title": "Rideau Locks (NAC) - Mackenzie-King Bridge",
-        "condition": "Fair",
+        "condition": "Closed",
         "length": "0.2 km\n\t\t\t\t\t\t"
     },
     {
         "title": "MacKenzie-King Bridge - Laurier Bridge",
-        "condition": "Fair",
+        "condition": "Closed",
         "length": "0.2 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Laurier Bridge - Corktown Footbridge / Somerset",
-        "condition": "Fair",
+        "condition": "Closed",
         "length": "0.4 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Corktown Footbridge / Somerset - Concord Street",
-        "condition": "Fair",
+        "condition": "Closed",
         "length": "0.6 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Concord Street - Pretoria Bridge",
-        "condition": "Good",
+        "condition": "Closed",
         "length": "0.65 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Pretoria Bridge - Fifth Ave",
-        "condition": "Good",
+        "condition": "Closed",
         "length": "0.8 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Patterson Creek - Patterson Creek",
-        "condition": "Fair",
+        "condition": "Closed",
         "length": "0.3 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Fifth Ave - Pig Island",
-        "condition": "Very Good",
+        "condition": "Closed",
         "length": "0.7 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Pig Island - Bank Street Bridge",
-        "condition": "Very Good",
+        "condition": "Closed",
         "length": "0.45 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Bank Street Bridge - Bronson Bridge",
-        "condition": "Good",
+        "condition": "Closed",
         "length": "1.0 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Bronson Bridge - Dows Lake",
-        "condition": "Good",
+        "condition": "Closed",
         "length": "0.2 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Dows Lake - Dows Lake",
-        "condition": "Good",
+        "condition": "Closed",
         "length": "1.7 km\n\t\t\t\t\t\t"
     },
     {
         "title": "Dows Lake - Hartwells Locks",
-        "condition": "Good",
+        "condition": "Closed",
         "length": "0.6 km\n\t\t\t\t\t\t"
     }
 ]

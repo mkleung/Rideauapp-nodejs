@@ -11,7 +11,6 @@
   <link href="css/landing.css" rel="stylesheet" type="text/css">
   <link rel="icon" href="img/ice-skating.svg" sizes="any" type="image/svg+xml">
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
-  <script src="js/moment.js"></script>
 </head>
 
 <body>
@@ -37,11 +36,9 @@
           <div class="navbar-menu" id="navbarMenu">
             <div class="navbar-end">
               <a class="navbar-item is-active">Home</a>
-              <span class="navbar-item">
-                <a class="button is-white is-outlined is-small" href="/api.html">
-                  <span class="icon"><i class="fa fa-location-arrow"></i></span>
-                  <span>API documentation</span>
-                </a>
+              <span class="navbar-item"><a class="button is-white is-outlined is-small" href="">
+                <span class="icon"><i class="fa fa-location-arrow"></i></span>
+                <span>Documentation</span></a>
               </span>
             </div>
           </div>
@@ -55,26 +52,53 @@
     |==========================================================================
     -->
       <div class="hero-body">
-        <div class="container has-text-centered">
-          <div class="column is-6 is-offset-3">
-            <h1 class="title">Rideau Canal Skating Conditions</h1>
-            <div class="box">
-              <div id="rideaumap"></div>
-              <div id="rideauparts"></div>
+        <div class="container">
+          <div class="column is-8 is-offset-2">
+            <h1 class="title has-text-centered">REST API Documentation</h1>
+            <div class="box content">
+
+                <h3>List All Canal Conditions</h3>
+                <hr>
+                <p>Returns json data about all canal conditions.</p>
+                <ul>
+                  <li>
+                      <strong>URL</strong>
+                      <p>/api/list</p>
+                  </li>
+
+                  <li>
+                      <strong>Method</strong>
+                      <p>GET</p>
+                  </li>
+
+                  <li>
+                      <strong>URL Params</strong>
+                      <p>None</p>
+                  </li>
+
+                  <li>
+                      <strong>Data Params</strong>
+                      <p>None</p>
+                  </li>
+
+                  <li>
+                    <strong>Success Response</strong>
+                    <ul>
+                        <li>Content:
+                            <pre>{ "title": "Rideau Locks (NAC) - Mackenzie-King Bridge", "condition": "Closed", "length": "0.2 km\n\t\t\t\t\t\t" }</pre>
+                        </li>
+                    </ul>
+                  </li>
+
+                </ul>
+
+
             </div>
           </div>
         </div>
       </div>
   </section>
 
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script src="https://unpkg.com/react@15/dist/react.js"></script>
-  <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
-  <script src="https://npmcdn.com/google-map-react@0.14.6/dist/GoogleMapReact.js"></script>
-
-  <script type="text/babel" src="js/rideauparts.js"></script>
-  <script type="text/babel" src="js/map.js"></script>
-
-
+  
   </body>
 </html>
