@@ -1,8 +1,13 @@
 {
   "name": "rideauapp",
   "version": "1.0.0",
+   "scripts": {
+    "client": "cd client && yarn start",
+    "server": "nodemon server.js",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
   "description": "",
-  "main": "server.js",
+ 
   "author": "mikeleung.ca",
   "dependencies": {
     "body-parser": "^1.18.2",
@@ -14,6 +19,7 @@
     "request": "^2.83.0"
   },
   "devDependencies": {
-    "nodemon": "^1.14.12"
+    "nodemon": "^1.14.12",
+    "concurrently": "^3.5.0"
   }
 }
