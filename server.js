@@ -23,18 +23,13 @@ else {
 */
 
 
-app.use(express.static('client/public'));
+app.use(express.static('public'));
 
+//  app.get('/', function(req, res){
+// 	console.log("get");
+// 	res.send({hello: "World"});
+// });
 
-/*
-|==========================================================================
-| TEST
-|==========================================================================
-*/
-
-app.get('/api/hello', (req, res) => {
-  res.send({ express: 'Hello From Express' });
-});
 
 /*
 |==========================================================================
