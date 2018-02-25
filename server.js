@@ -23,7 +23,7 @@ else {
 */
 
 
-//app.use(express.static('client/public'));
+app.use(express.static('client/public'));
 
 
 /*
