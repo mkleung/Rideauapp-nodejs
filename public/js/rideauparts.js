@@ -27,6 +27,8 @@ componentDidMount: function() {
     });
   },
 
+
+
 render: function(){
 
 		var rideauparts = this.state.rideauparts;
@@ -55,11 +57,15 @@ render: function(){
 			        var colorClass = "has-text-danger";
 			}
 
+handleClick(e) {
+  e.preventDefault();
+  console.log("The link was clicked");
+},
 
             var rideauLength = (rideaupart.length).trim();
             return (
             	<tr key={index}>
-			      <td>{rideaupart.title}</td>
+			      <td><a className="rideaupart" onClick={this.handleClick} >{rideaupart.title}</a></td>
 			       <td>{rideauLength}</td>
 			      <td><strong><span className={colorClass}>{rideaupart.condition}</span></strong></td>
 			    </tr>

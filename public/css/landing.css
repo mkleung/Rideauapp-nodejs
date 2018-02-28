@@ -29,3 +29,8 @@ html, body {
 hr  {
   margin: 0;
 }
+
+
+.rideaupart:hover {
+  text-decoration: underline;
+}
