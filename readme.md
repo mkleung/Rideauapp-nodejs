@@ -2,17 +2,18 @@
 
 https://young-ridge-69555.herokuapp.com/
 
-
+- This app has been built using react and it shows which part of the rideau canal is open.
 
 
 == Install THE REGULAR WAY ==
 
-
-npm install express
-npm install cheerio
-npm install request
-npm install moment --save
-npm install --save google-map-react
+```
+npm install express  
+npm install cheerio  
+npm install request  
+npm install moment --save  
+npm install --save google-map-react  
+```
 
 == STARTING THE SERVER ==
 
